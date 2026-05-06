@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Usage - Magnifx Example</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f9; color: #333; }
+        section { margin-bottom: 60px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { margin-top: 0; color: #555; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        img { width: 100%; border-radius: 4px; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h1>Magnifx 2.0 Basic Usage</h1>
+
+    <!-- TEST 1: SYNCED GROUP (HOVER) -->
+    <section>
+        <h2>1. Synced Group (Hover Mode)</h2>
+        <p>Move the mouse over any image. All three will zoom the same area.</p>
+        <div id="test-group-hover" class="grid" data-group-configs='{"zoom": 1.5, "smart": true, "wheelzoom": true}'>
+            <img src="https://picsum.photos/id/10/600/400" alt="Img 1">
+            <img src="https://picsum.photos/id/10/600/500" alt="Img 1">
+            <img src="https://picsum.photos/id/10/600/650" alt="Img 1">
+        </div>
+    </section>
+
+    <!-- TEST 2: SYNCED GROUP (CLICK TO TOGGLE) -->
+    <section>
+        <h2>2. Synced Group (Click Mode)</h2>
+        <p>Click on any image to lock/unlock the lens. Useful for detailed analysis.</p>
+        <div id="test-group-click" class="grid" data-group-configs='{"listener": "click", "zoom": 3, "crosshair": true}'>
+            <img src="https://picsum.photos/id/20/600/400" data-magnifx-src="https://picsum.photos/id/20/1800/1200" alt="Img 1">
+            <img src="https://picsum.photos/id/21/600/400" data-magnifx-src="https://picsum.photos/id/21/1800/1200" alt="Img 2">
+            <img src="https://picsum.photos/id/22/600/400" data-magnifx-src="https://picsum.photos/id/22/1800/1200" alt="Img 3">
+        </div>
+    </section>
+
+    <!-- TEST 3: SINGLE IMAGE -->
+    <section>
+        <h2>3. Single Image (Classic)</h2>
+        <div style="max-width: 400px;">
+            <img id="single-test" src="https://picsum.photos/id/30/600/400" data-magnifx-src="https://picsum.photos/id/30/1200/800" alt="Single">
+        </div>
+    </section>
+
+    <!-- Import Magnifx -->
+    <script src="../magnifx.js"></script>
+
+    <script>
+        // Init Group 1
+        magnifx(document.getElementById('test-group-hover'));
+
+        // Init Group 2
+        magnifx(document.getElementById('test-group-click'));
+
+        // Init Single Image via JS options
+        magnifx(document.getElementById('single-test'), {
+            zoom: 4,
+            wheelzoom: true,
+            crosshair: false
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click to Zoom - Magnifx Example</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f9; color: #333; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        img { width: 100%; border-radius: 4px; }
+        h1 { margin-top: 0; color: #555; }
+        p { color: #666; line-height: 1.6; }
+        .instructions { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Click to Zoom Example</h1>
+    
+    <div class="instructions">
+        <p><strong>How to use:</strong></p>
+        <ul>
+            <li><strong>Click</strong> on any image to lock/unlock the magnifying lens</li>
+            <li>While the lens is locked, use your <strong>mouse scroll wheel</strong> to adjust zoom (1x - 10x)</li>
+            <li>Move your mouse to reposition the lens while locked</li>
+            <li>All three images are synchronized - they zoom together!</li>
+        </ul>
+    </div>
+    
+    <div id="click-gallery" class="grid" data-group-configs='{"listener": "click", "zoom": 3, "wheelzoom": true, "crosshair": true}'>
+        <img src="https://picsum.photos/id/100/600/400" 
+             data-magnifx-src="https://picsum.photos/id/100/1800/1200" 
+             alt="Architecture 1">
+        <img src="https://picsum.photos/id/101/600/400" 
+             data-magnifx-src="https://picsum.photos/id/101/1800/1200" 
+             alt="Architecture 2">
+        <img src="https://picsum.photos/id/102/600/400" 
+             data-magnifx-src="https://picsum.photos/id/102/1800/1200" 
+             alt="Architecture 3">
+    </div>
+
+    <script src="../magnifx.js"></script>
+    <script>
+        // Initialize with click mode + wheelzoom (also configured via data-group-configs)
+        magnifx(document.getElementById('click-gallery'));
+    </script>
+</body>
+</html>

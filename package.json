@@ -1,0 +1,20 @@
+{
+  "name": "magnifx",
+  "version": "1.0.0",
+  "description": "A standalone, lightweight ES6 library for synchronized magnifying glass zoom. Supports individual images or groups with shared movement and zoom levels.",
+  "main": "magnifx.js",
+  "keywords": [
+    "magnifier",
+    "zoom",
+    "image-zoom",
+    "synchronized-zoom",
+    "es6",
+    "vanilla-js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anomalyco/magnifx.git"
+  },
+  "author": "Andrea Gelmini",
+  "license": "MIT"
+}

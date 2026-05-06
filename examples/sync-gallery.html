@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Synced Gallery - Magnifx Example</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f9; color: #333; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        img { width: 100%; border-radius: 4px; }
+        h1 { margin-top: 0; color: #555; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Synced Gallery Example</h1>
+    <p>Move your mouse over any image. All three will zoom to the same area in perfect sync.</p>
+    
+    <div id="synced-gallery" class="grid">
+        <img src="https://picsum.photos/id/10/600/400" 
+             data-magnifx-src="https://picsum.photos/id/10/1200/800" 
+             alt="Nature Image 1">
+        <img src="https://picsum.photos/id/20/600/400" 
+             data-magnifx-src="https://picsum.photos/id/20/1200/800" 
+             alt="Nature Image 2">
+        <img src="https://picsum.photos/id/30/600/400" 
+             data-magnifx-src="https://picsum.photos/id/30/1200/800" 
+             alt="Nature Image 3">
+    </div>
+
+    <script src="../magnifx.js"></script>
+    <script>
+        // Initialize the synced group with default hover mode
+        magnifx(document.getElementById('synced-gallery'));
+    </script>
+</body>
+</html>
