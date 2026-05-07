@@ -1,3 +1,9 @@
+---
+layout: default
+title: Advanced Interactions
+nav_order: 5
+---
+
 # Advanced Interactions
 
 Magnifx provides advanced interaction modes beyond basic hover zoom, giving users more control over how they inspect images.

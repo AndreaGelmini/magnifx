@@ -1,0 +1,17 @@
+theme: just-the-docs
+title: Magnifx Documentation
+description: A lightweight, zero-dependency JavaScript library for image magnification with synchronized zoom
+baseurl: /magnifx
+url: https://andreagelmini.github.io
+
+nav:
+  - title: Getting Started
+    url: /getting-started
+  - title: Configuration
+    url: /configuration
+  - title: Synchronized Groups
+    url: /synchronized-groups
+  - title: Advanced Interactions
+    url: /advanced-interactions
+  - title: Examples
+    url: /examples/

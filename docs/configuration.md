@@ -1,3 +1,9 @@
+---
+layout: default
+title: Configuration
+nav_order: 3
+---
+
 # Configuration
 
 Magnifx offers flexible configuration options that can be set via JavaScript or through HTML data attributes.

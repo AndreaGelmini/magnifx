@@ -1,3 +1,9 @@
+---
+layout: default
+title: Getting Started
+nav_order: 2
+---
+
 # Getting Started
 
 Welcome to Magnifx! This guide will help you get up and running with the library in minutes.

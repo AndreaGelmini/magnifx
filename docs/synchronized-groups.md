@@ -1,3 +1,9 @@
+---
+layout: default
+title: Synchronized Groups
+nav_order: 4
+---
+
 # Synchronized Groups
 
 Magnifx's standout feature is **synchronized multi-zoom**: when you move the magnifying lens on one image in a group, all other images in the same group automatically update to show the exact same relative area at the same zoom level.
